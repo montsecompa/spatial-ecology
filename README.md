@@ -1,53 +1,40 @@
-# Spatial Ecology Sessions
+# Ecología Espacial · Spatial Ecology
 
-Course website for weekly classes in R, statistics and GIS (QGIS and ArcGIS Pro) for spatial ecology.
-It is a plain static site published with GitHub Pages.
+Web del curso de R, estadística y SIG (QGIS y ArcGIS Pro) para ecología espacial, en castellano e inglés.
+Course website for R, statistics and GIS (QGIS and ArcGIS Pro) for spatial ecology, in Spanish and English.
 
-## What is in this folder
+## Contenido / Contents
 
-| Path | What it is |
+| Ruta / Path | Qué es / What it is |
 |---|---|
-| `index.html` | The page itself. No need to edit. |
-| `course-data.js` | **All the course content**: course details, the weekly sessions and their materials. Edit this. |
-| `materials/weekNN/` | Handouts, R scripts and datasets for each week. |
-| `style.css`, `app.js` | Design and page code. No need to edit. |
+| `index.html`, `app.js`, `style.css` | La página. No hace falta editarlos. / The page. No need to edit. |
+| `course-data.js` | **Todo el contenido**: datos del curso, semanas y materiales. / **All the content**: course details, weeks and materials. |
+| `materials/weekNN/` | Guías (PDF), scripts de R, soluciones y datos de cada semana. / Handouts (PDF), R scripts, solutions and data for each week. |
+| `materials/course_data_datos_curso.zip` | Todos los datos del curso. / All course data. |
 
-## Adding next week's materials
+Archivos con prefijo `S`/`semana` = castellano; `W`/`week` = inglés. Los datos son comunes.
+Files starting with `S`/`semana` are Spanish; `W`/`week` are English. Data files are shared.
 
-1. Open the repository on github.com and go into the `materials` folder.
-2. Click **Add file → Upload files**. In the box at the top, type the folder name first (for example `week03/`), then drag in the files. Click **Commit changes**.
-3. Open `course-data.js`, click the pencil icon (**Edit this file**) and find the week you're updating.
-4. Inside its `"materials": [ ]`, add one line per file, separated by commas:
+## Añadir o cambiar materiales / Adding or changing materials
 
-   ```js
-   "materials": [
-     { "name": "Week03_Handout.pdf", "file": "materials/week03/Week03_Handout.pdf", "note": "Read before class" },
-     { "name": "week03_models.R", "file": "materials/week03/week03_models.R" }
-   ]
-   ```
-
-   For something stored elsewhere (a large raster on Google Drive, say), use `"url"` instead of `"file"`:
+1. En github.com, entra en `materials/weekNN/` y usa **Add file → Upload files**. / On github.com, open `materials/weekNN/` and use **Add file → Upload files**.
+2. Edita `course-data.js` (icono del lápiz) y añade una línea en `"materials"` de esa semana: / Edit `course-data.js` (pencil icon) and add a line to that week's `"materials"`:
 
    ```js
-   { "name": "Land cover raster (Google Drive)", "url": "https://drive.google.com/..." }
+   { "name": "S03_Diapositivas.pdf", "file": "materials/week03/S03_Diapositivas.pdf", "lang": "es" },
+   { "name": "W03_Slides.pdf", "file": "materials/week03/W03_Slides.pdf", "lang": "en" }
    ```
 
-5. Click **Commit changes**. The site updates within a minute or two.
+   Sin `"lang"`, el archivo aparece en los dos idiomas. Para un enlace externo usa `"url"` en lugar de `"file"`.
+   Without `"lang"` the file shows in both languages. For an external link use `"url"` instead of `"file"`.
 
-You can change a week's `title`, `date` (format `"2026-11-04"`), `summary`, `goals` and `prep` in the same file.
-Topics in `tracks` are `"r"`, `"stat"` and `"gis"`.
+3. **Commit changes**. La web se actualiza en uno o dos minutos. / The site updates in a minute or two.
 
-**If the page shows "The course content could not be loaded"**, there is a typing error in `course-data.js`,
-usually a missing comma or quote. Check the last thing you changed.
+Fechas: `"date": "2026-11-04"`. Si aparece "No se ha podido cargar el contenido", falta una coma o unas comillas en `course-data.js`.
+Dates: `"date": "2026-11-04"`. If the page says the content could not be loaded, a comma or quote is missing in `course-data.js`.
 
-## Who can edit
+## Datos / Data
 
-Only you, and anyone you add as a collaborator in **Settings → Collaborators**. Students only need the link.
-
-Files on GitHub should stay under 25 MB each when uploaded through the website (100 MB is the hard limit).
-For bigger datasets, share them from Google Drive or OneDrive and add them with `"url"`.
-
-## Note on the data
-
-The datasets in `materials/` are simulated for teaching. They imitate bird point counts on a Mediterranean
-mountain but are not real survey data.
+Todos los datos son **simulados con fines docentes** (Sierra de Montfred, un parque natural ficticio), en ETRS89 / UTM 31N (EPSG:25831).
+All data are **simulated for teaching** (Sierra de Montfred, a fictitious natural park), in ETRS89 / UTM 31N (EPSG:25831).
+Los scripts se han ejecutado de principio a fin con R 4.4. / The scripts have been run end to end with R 4.4.

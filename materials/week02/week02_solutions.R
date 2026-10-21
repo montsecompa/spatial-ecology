@@ -1,5 +1,5 @@
 # =====================================================================
-#  Spatial Ecology Sessions  ·  Week 2  ·  Exercise solutions
+#  Spatial Ecology  ·  Week 2  ·  Exercise solutions
 # =====================================================================
 # Run sections 1 to 6 of week02_wrangling_and_plotting.R first, so that
 # `birds`, `point_summary` and `species_by_habitat` exist.
@@ -17,7 +17,7 @@ birds |>
   arrange(desc(birds_per_visit))
 # Totals depend on how many visits each person did, so compare the
 # per-visit column. Differences between observers are a real issue in
-# bird surveys ("observer effects"); we return to it with GLMs in Week 4.
+# bird surveys ("observer effects"); we model it in Week 4.
 
 # E2. Three most counted species
 birds |>

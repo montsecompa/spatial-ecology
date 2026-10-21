@@ -1,11 +1,11 @@
-"species","scientific_name","family","diet","nest_type","mass_g"
-"european_robin","Erithacus rubecula","Muscicapidae","insectivore","ground/bank",18
-"common_chaffinch","Fringilla coelebs","Fringillidae","granivore","tree",24
-"great_tit","Parus major","Paridae","omnivore","cavity",18
-"coal_tit","Periparus ater","Paridae","insectivore","cavity",9
-"sardinian_warbler","Curruca melanocephala","Sylviidae","insectivore","shrub",11
-"common_blackbird","Turdus merula","Turdidae","omnivore","shrub",100
-"western_bonellis_warbler","Phylloscopus bonelli","Phylloscopidae","insectivore","ground",8
-"woodlark","Lullula arborea","Alaudidae","insectivore","ground",27
-"rock_bunting","Emberiza cia","Emberizidae","granivore","ground",23
-"short_toed_treecreeper","Certhia brachydactyla","Certhiidae","insectivore","cavity",9
+"species","scientific_name","common_name_es","family","diet","nest_type","mass_g"
+"european_robin","Erithacus rubecula","petirrojo europeo","Muscicapidae","insectivore","ground/bank",18
+"common_chaffinch","Fringilla coelebs","pinzón vulgar","Fringillidae","granivore","tree",24
+"great_tit","Parus major","carbonero común","Paridae","omnivore","cavity",18
+"coal_tit","Periparus ater","carbonero garrapinos","Paridae","insectivore","cavity",9
+"sardinian_warbler","Curruca melanocephala","curruca cabecinegra","Sylviidae","insectivore","shrub",11
+"common_blackbird","Turdus merula","mirlo común","Turdidae","omnivore","shrub",100
+"western_bonellis_warbler","Phylloscopus bonelli","mosquitero papialbo","Phylloscopidae","insectivore","ground",8
+"woodlark","Lullula arborea","alondra totovía","Alaudidae","insectivore","ground",27
+"rock_bunting","Emberiza cia","escribano montesino","Emberizidae","granivore","ground",23
+"short_toed_treecreeper","Certhia brachydactyla","agateador europeo","Certhiidae","insectivore","cavity",9

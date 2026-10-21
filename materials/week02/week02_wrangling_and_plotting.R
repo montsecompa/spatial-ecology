@@ -1,5 +1,5 @@
 # =====================================================================
-#  Spatial Ecology Sessions  ·  Week 2
+#  Spatial Ecology  ·  Week 2
 #  Wrangling and plotting ecological data with the tidyverse
 # =====================================================================
 #
@@ -8,8 +8,8 @@
 #    bird_counts_wide.csv   (three visits per point, one column per species)
 #    species_traits.csv     (one row per species)
 #
-#  The data are SIMULATED for teaching: 40 bird point counts on a
-#  Mediterranean mountain, visited in April, May and June 2026.
+#  The data are SIMULATED: 40 bird point counts in the (fictitious)
+#  Sierra de Montfred, visited in April, May and June 2026.
 #  The counts file contains a few deliberate problems to fix.
 # =====================================================================
 
@@ -23,7 +23,7 @@ points <- read_csv("data/survey_points.csv")
 counts <- read_csv("data/bird_counts_wide.csv")
 traits <- read_csv("data/species_traits.csv")
 
-glimpse(counts)   # like str(), but tidier
+glimpse(counts)
 # Note: date was read as text (chr), not as a date. We fix that below.
 
 
@@ -46,10 +46,9 @@ counts |> count(observer)
 counts <- counts |>
   mutate(
     obs_key  = str_to_upper(str_remove_all(observer, "[ .]")),   # "MPUIG"
-    observer = case_match(obs_key,
-                          "MPUIG"   ~ "M. Puig",
-                          "JSERRA"  ~ "J. Serra",
-                          "AFERRER" ~ "A. Ferrer")
+    observer = case_when(obs_key == "MPUIG"   ~ "M. Puig",
+                         obs_key == "JSERRA"  ~ "J. Serra",
+                         obs_key == "AFERRER" ~ "A. Ferrer")
   ) |>
   select(-obs_key)
 
@@ -89,6 +88,7 @@ nrow(counts_long)               # 40 points x 3 visits x 10 species, minus NAs
 birds <- counts_long |>
   left_join(traits, by = "species") |>
   left_join(points, by = "point_id")
+
 
 glimpse(birds)
 
@@ -197,11 +197,11 @@ dir.create("outputs", showWarnings = FALSE)
 write_csv(point_summary,   "outputs/point_summary.csv")
 write_csv(habitat_summary, "outputs/habitat_summary.csv")
 
-ggsave("outputs/richness_by_habitat.png",  p_rich,  width = 7, height = 5, dpi = 300, bg = "white")
-ggsave("outputs/abundance_elevation.png",  p_elev,  width = 7, height = 5, dpi = 300, bg = "white")
-ggsave("outputs/species_heatmap.png",      p_heat,  width = 7, height = 5, dpi = 300, bg = "white")
-ggsave("outputs/season_by_diet.png",       p_season, width = 8, height = 4, dpi = 300, bg = "white")
-ggsave("outputs/survey_map.png",           p_map,   width = 6, height = 5, dpi = 300, bg = "white")
+ggsave("outputs/richness_by_habitat.png", p_rich,   width = 7, height = 5, dpi = 300, bg = "white")
+ggsave("outputs/abundance_elevation.png", p_elev,   width = 7, height = 5, dpi = 300, bg = "white")
+ggsave("outputs/species_heatmap.png",     p_heat,   width = 7, height = 5, dpi = 300, bg = "white")
+ggsave("outputs/season_by_diet.png",      p_season, width = 8, height = 4, dpi = 300, bg = "white")
+ggsave("outputs/survey_map.png",          p_map,    width = 6, height = 5, dpi = 300, bg = "white")
 
 
 # =====================================================================
@@ -213,9 +213,9 @@ ggsave("outputs/survey_map.png",           p_map,   width = 6, height = 5, dpi =
 # E2. Using `birds`, find the three species with the highest total
 #     count across all points and visits.
 #
-# E3. Make a new column `forest` that is "forest" for the four forest
-#     habitats and "open" for heathland and meadow (hint: if_else()
-#     and %in%). Compare mean richness between forest and open points.
+# E3. Make a new column `forest` that is "open" for heathland and
+#     meadow and "forest" for the rest (hint: if_else() and %in%).
+#     Compare mean richness between forest and open points.
 #
 # E4. Plot canopy cover (x) against richness (y) from point_summary.
 #     Colour by habitat and add a straight-line trend with

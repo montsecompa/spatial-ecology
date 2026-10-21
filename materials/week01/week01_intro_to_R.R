@@ -1,5 +1,5 @@
 # =====================================================================
-#  Spatial Ecology Sessions  ·  Week 1
+#  Spatial Ecology  ·  Week 1
 #  Getting set up: first steps in R
 # =====================================================================
 #
@@ -11,8 +11,8 @@
 #     (Cmd + Enter on a Mac). Read the comments as you go.
 #
 #  Lines starting with # are comments: R ignores them.
-#  The dataset is SIMULATED for teaching. It imitates bird point counts
-#  in a Mediterranean mountain range but is not real survey data.
+#  The data are SIMULATED for teaching: they imitate bird surveys in the
+#  Sierra de Montfred, a fictitious natural park.
 # =====================================================================
 
 
@@ -57,9 +57,9 @@ robins * 2
 robins > 2       # a logical vector: TRUE / FALSE for each value
 
 # Indexing with square brackets: position starts at 1
-robins[1]        # first value
-robins[2:4]      # values 2 to 4
-robins[robins > 2]  # only the values greater than 2
+robins[1]
+robins[2:4]
+robins[robins > 2]   # only the values greater than 2
 
 
 # ---------------------------------------------------------------------
@@ -77,14 +77,14 @@ table(habitat_f)               # count of each category
 
 # Missing values are NA. Many functions need na.rm = TRUE to skip them.
 counts <- c(3, NA, 5, 2)
-mean(counts)               # NA, because one value is unknown
-mean(counts, na.rm = TRUE) # 3.33
+mean(counts)                # NA, because one value is unknown
+mean(counts, na.rm = TRUE)  # 3.33
 
 
 # ---------------------------------------------------------------------
 # 5. Getting help
 # ---------------------------------------------------------------------
-?mean               # opens the help page in the Help pane
+?mean
 help("read.csv")
 # Scroll to the "Examples" section at the bottom of any help page.
 
@@ -105,7 +105,7 @@ mini[, "habitat"]   # all rows, one column
 
 
 # ---------------------------------------------------------------------
-# 7. Reading a real (simulated) dataset
+# 7. Reading a dataset
 # ---------------------------------------------------------------------
 # The path is relative to your project folder. If you get
 # "cannot open file", check that the file really is in data/.
@@ -114,11 +114,11 @@ points <- read.csv("data/survey_points.csv")
 head(points)        # first six rows
 str(points)         # structure: column names and types
 summary(points)     # quick summary of every column
-nrow(points)        # number of survey points
-names(points)       # column names
+nrow(points)
+names(points)
 
-table(points$habitat)          # points per habitat
-mean(points$elevation_m)       # mean elevation
+table(points$habitat)
+mean(points$elevation_m)
 
 
 # ---------------------------------------------------------------------
@@ -131,7 +131,7 @@ beech <- points[points$habitat == "beech forest", ]   # == tests equality
 summary(beech$canopy_cover_pct)
 
 # Several conditions: & means AND, | means OR
-open_high <- points[points$canopy_cover_pct < 30 & points$elevation_m > 1100, ]
+open_high <- points[points$canopy_cover_pct < 30 & points$elevation_m > 1200, ]
 open_high
 
 
@@ -151,12 +151,12 @@ canopy[order(canopy$canopy_cover_pct, decreasing = TRUE), ]
 # ---------------------------------------------------------------------
 # 10. First plots with base R
 # ---------------------------------------------------------------------
-hist(points$elevation_m,
-     main = "Elevation of survey points",
+hist(points$elevation_m, main = "Elevation of survey points",
      xlab = "Elevation (m)", col = "grey80", border = "white")
 
-boxplot(elevation_m ~ habitat, data = points,
-        las = 2, xlab = "", ylab = "Elevation (m)", cex.axis = 0.8)
+par(mar = c(9, 4.5, 1, 1))   # wide bottom margin for the labels
+boxplot(elevation_m ~ habitat, data = points, las = 2, xlab = "", ylab = "Elevation (m)", cex.axis = 0.8)
+par(mar = c(5, 4, 4, 2))
 
 # A first "map": longitude on x, latitude on y.
 # This is not yet a proper map (no projection); that comes in Week 5.
@@ -171,8 +171,7 @@ legend("bottomright", legend = levels(points$habitat),
 # ---------------------------------------------------------------------
 # 11. Saving your work
 # ---------------------------------------------------------------------
-# Create the outputs/ folder if it does not exist yet
-dir.create("outputs", showWarnings = FALSE)
+dir.create("outputs", showWarnings = FALSE)   # create outputs/ if it does not exist
 
 write.csv(canopy, "outputs/canopy_by_habitat.csv", row.names = FALSE)
 

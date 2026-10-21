@@ -119,3 +119,10 @@ textarea{min-height:76px;resize:vertical}
 code{font-family:var(--f-mono);font-size:.9em;background:var(--paper);padding:1px 5px;border-radius:3px}
 footer{padding-block:24px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* language switch */
+.lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+.lang-switch button{font:500 13px var(--f-mono);letter-spacing:.06em;border:0;background:transparent;color:var(--muted);padding:6px 12px;cursor:pointer}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.kind{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:78px}
+.side-links a{overflow-wrap:anywhere}
