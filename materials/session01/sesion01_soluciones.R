@@ -4,7 +4,7 @@
 # Casi siempre hay más de una forma correcta. Si la tuya da el mismo
 # resultado, es correcta.
 
-points <- read.csv("data/survey_points.csv")
+points <- read.csv("1.Data/survey_points.csv")
 
 # E1. Velocidad en km/h
 transect_km <- 2.5

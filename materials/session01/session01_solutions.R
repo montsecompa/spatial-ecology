@@ -4,7 +4,7 @@
 # There is usually more than one correct way. If yours gives the same
 # answer, it is right.
 
-points <- read.csv("data/survey_points.csv")
+points <- read.csv("1.Data/survey_points.csv")
 
 # E1. Walking speed in km per hour
 transect_km <- 2.5

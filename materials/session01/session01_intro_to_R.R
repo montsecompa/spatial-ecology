@@ -5,8 +5,9 @@
 #
 #  How to use this script
 #  ----------------------
-#  1. Open your course RStudio project (File > Open Project...).
-#  2. Put survey_points.csv inside the project's data/ folder.
+#  1. Create the RStudio project session01 (File > New Project...)
+#     with the folders 1.Data, 2.Scripts and 3.Outputs.
+#  2. Put survey_points.csv inside the project's 1.Data/ folder.
 #  3. Run the script one line at a time with Ctrl + Enter
 #     (Cmd + Enter on a Mac). Read the comments as you go.
 #
@@ -108,8 +109,8 @@ mini[, "habitat"]   # all rows, one column
 # 7. Reading a dataset
 # ---------------------------------------------------------------------
 # The path is relative to your project folder. If you get
-# "cannot open file", check that the file really is in data/.
-points <- read.csv("data/survey_points.csv")
+# "cannot open file", check that the file really is in 1.Data/.
+points <- read.csv("1.Data/survey_points.csv")
 
 head(points)        # first six rows
 str(points)         # structure: column names and types
@@ -171,11 +172,11 @@ legend("bottomright", legend = levels(points$habitat),
 # ---------------------------------------------------------------------
 # 11. Saving your work
 # ---------------------------------------------------------------------
-dir.create("outputs", showWarnings = FALSE)   # create outputs/ if it does not exist
+dir.create("3.Outputs", showWarnings = FALSE)   # create 3.Outputs/ if it does not exist
 
-write.csv(canopy, "outputs/canopy_by_habitat.csv", row.names = FALSE)
+write.csv(canopy, "3.Outputs/canopy_by_habitat.csv", row.names = FALSE)
 
-png("outputs/elevation_histogram.png", width = 1600, height = 1200, res = 200)
+png("3.Outputs/elevation_histogram.png", width = 1600, height = 1200, res = 200)
 hist(points$elevation_m, main = "Elevation of survey points",
      xlab = "Elevation (m)", col = "grey80", border = "white")
 dev.off()

@@ -50,19 +50,19 @@ window.COURSE = {
         "gis"
       ],
       "summary": {
-        "es": "Instalar las herramientas, organizar un proyecto reproducible y un primer vistazo a R y QGIS con los mismos datos.",
-        "en": "Install the toolkit, organise a reproducible project folder, and take a first look at R and QGIS with the same data."
+        "es": "Instalar las herramientas, crear el proyecto de RStudio de cada sesión y un primer vistazo a R y QGIS con los mismos datos.",
+        "en": "Install the toolkit, set up the RStudio project used in every session, and take a first look at R and QGIS with the same data."
       },
       "goals": {
         "es": [
           "Instalar R, RStudio y QGIS (LTR)",
-          "Crear un proyecto de RStudio con las carpetas data/, scripts/ y outputs/",
+          "Crear un proyecto de RStudio con las carpetas 1.Data/, 2.Scripts/ y 3.Outputs/",
           "Primer script: vectores, data frames y leer un CSV",
           "Cargar los puntos en QGIS y guardar un GeoPackage"
         ],
         "en": [
           "Install R, RStudio and QGIS (LTR)",
-          "Create an RStudio project with data/, scripts/ and outputs/ folders",
+          "Create an RStudio project with 1.Data/, 2.Scripts/ and 3.Outputs/ folders",
           "First script: vectors, data frames and reading a CSV",
           "Load the points in QGIS and save a GeoPackage"
         ]
@@ -98,8 +98,8 @@ window.COURSE = {
           "lang": "es",
           "kind": "script",
           "note": {
-            "es": "Guárdalo en la carpeta scripts/",
-            "en": "Save it in your scripts/ folder"
+            "es": "Guárdalo en la carpeta 2.Scripts/",
+            "en": "Save it in your 2.Scripts/ folder"
           }
         },
         {
@@ -108,8 +108,8 @@ window.COURSE = {
           "lang": "en",
           "kind": "script",
           "note": {
-            "es": "Guárdalo en la carpeta scripts/",
-            "en": "Save it in your scripts/ folder"
+            "es": "Guárdalo en la carpeta 2.Scripts/",
+            "en": "Save it in your 2.Scripts/ folder"
           }
         },
         {
@@ -117,8 +117,8 @@ window.COURSE = {
           "file": "materials/session01/survey_points.csv",
           "kind": "data",
           "note": {
-            "es": "Guárdalo en la carpeta data/ del proyecto",
-            "en": "Save it in your project's data/ folder"
+            "es": "Guárdalo en la carpeta 1.Data/ del proyecto",
+            "en": "Save it in your project's 1.Data/ folder"
           }
         },
         {
@@ -171,8 +171,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Instala el tidyverse: install.packages(\"tidyverse\"). Trae la carpeta del proyecto de la sesión 1.",
-        "en": "Install the tidyverse: install.packages(\"tidyverse\"). Bring your Session 1 project folder."
+        "es": "Instala el tidyverse: install.packages(\"tidyverse\"). Al empezar crearemos el proyecto sesion02.",
+        "en": "Install the tidyverse: install.packages(\"tidyverse\"). We start by creating the project session02."
       },
       "materials": []
     },
@@ -271,8 +271,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Comprueba que QGIS se abre sin errores y descarga los datos de esta sesión en tu carpeta data/.",
-        "en": "Make sure QGIS opens without errors and download this session's data into your data/ folder."
+        "es": "Comprueba que QGIS se abre sin errores y descarga los datos de esta sesión en tu carpeta 1.Data/.",
+        "en": "Make sure QGIS opens without errors and download this session's data into your 1.Data/ folder."
       },
       "materials": []
     },
