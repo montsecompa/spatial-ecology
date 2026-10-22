@@ -10,7 +10,6 @@ Course website for R, statistics and GIS (QGIS and ArcGIS Pro) for spatial ecolo
 | `index.html`, `app.js`, `style.css` | La página. No hace falta editarlos. / The page. No need to edit. |
 | `course-data.js` | **Todo el contenido**: datos del curso, semanas y materiales. / **All the content**: course details, weeks and materials. |
 | `materials/weekNN/` | Guías (PDF), scripts de R, soluciones y datos de cada semana. / Handouts (PDF), R scripts, solutions and data for each week. |
-| `materials/course_data_datos_curso.zip` | Todos los datos del curso. / All course data. |
 
 Archivos con prefijo `S`/`semana` = castellano; `W`/`week` = inglés. Los datos son comunes.
 Files starting with `S`/`semana` are Spanish; `W`/`week` are English. Data files are shared.
