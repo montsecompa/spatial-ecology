@@ -1,5 +1,5 @@
 # =====================================================================
-#  Ecología Espacial  ·  Semana 1
+#  Ecología Espacial  ·  Sesión 1
 #  Puesta en marcha: primeros pasos en R
 # =====================================================================
 #
@@ -161,7 +161,7 @@ boxplot(elevation_m ~ habitat, data = points, las = 2, xlab = "", ylab = "Altitu
 par(mar = c(5, 4, 4, 2))
 
 # Un primer "mapa": longitud en x, latitud en y.
-# Aún no es un mapa de verdad (sin proyección); eso llega en la semana 5.
+# Aún no es un mapa de verdad (sin proyección); eso llega en la sesión 5.
 points$habitat <- factor(points$habitat)
 plot(latitude ~ longitude, data = points,
      col = as.integer(points$habitat), pch = 19,
@@ -184,14 +184,14 @@ dev.off()
 
 
 # ---------------------------------------------------------------------
-# 12. Preparar la semana 2
+# 12. Preparar la sesión 2
 # ---------------------------------------------------------------------
 # Ejecuta esto una vez (tarda unos minutos). Quita primero el #.
 # install.packages("tidyverse")
 
 
 # =====================================================================
-#  EJERCICIOS  (soluciones en semana01_soluciones.R; ¡inténtalo antes!)
+#  EJERCICIOS  (soluciones en sesion01_soluciones.R; ¡inténtalo antes!)
 # =====================================================================
 # E1. Se recorrió un transecto de 2,5 km en 50 minutos. Guarda ambos
 #     valores en objetos y calcula la velocidad en km/h.

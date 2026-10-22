@@ -10,24 +10,24 @@
   }
 
   var UI = {
-    es: { sessions: "sesiones semanales", course: "Curso", instructor: "Docente", meets: "Horario", contact: "Contacto",
-      legend: "Leyenda · filtrar por tema", all: "Todas las sesiones", next: "Próxima clase", goWeek: "Ir a esta semana",
+    es: { sessions: "sesiones", course: "Curso", instructor: "Docente", meets: "Horario", contact: "Contacto",
+      legend: "Leyenda · filtrar por tema", all: "Todas las sesiones", next: "Próxima clase", goWeek: "Ir a esta sesión",
       jump: "Ir a", refLink: "Software, libros y datos", allData: "Todos los datos del curso (zip)",
-      weekly: "Sesiones semanales", showingAll: "Todas", showing: "Mostrando", learn: "Aprenderás a", before: "Antes de clase",
+      weekly: "Sesiones", showingAll: "Todas", showing: "Mostrando", learn: "Aprenderás a", before: "Antes de clase",
       materials: "Materiales de la clase", soon: "Los materiales se publicarán aquí antes de la clase.", none: "Todavía no hay sesiones de este tema.",
       download: "Descargar", tbc: "Fecha por confirmar", ref: "Referencia", refTitle: "Software, libros y datos",
-      pkgs: "Paquetes de R que usamos", pkgsNote: "Instálalos semana a semana o todos de una vez:",
+      pkgs: "Paquetes de R que usamos", pkgsNote: "Instálalos sesión a sesión o todos de una vez:",
       kinds: { handout: "Guía", script: "Script R", data: "Datos", solutions: "Soluciones", link: "Enlace" },
       tracks: { r: "Programación en R", stat: "Estadística", gis: "SIG y cartografía" }, mark: "S" },
-    en: { sessions: "weekly sessions", course: "Course", instructor: "Instructor", meets: "Meets", contact: "Contact",
-      legend: "Legend · filter by topic", all: "All sessions", next: "Next class", goWeek: "Go to this week",
+    en: { sessions: "sessions", course: "Course", instructor: "Instructor", meets: "Meets", contact: "Contact",
+      legend: "Legend · filter by topic", all: "All sessions", next: "Next class", goWeek: "Go to this session",
       jump: "Jump to", refLink: "Software, books and data", allData: "All course data (zip)",
-      weekly: "Weekly sessions", showingAll: "Showing all", showing: "Showing", learn: "You will learn to", before: "Before class",
+      weekly: "Sessions", showingAll: "Showing all", showing: "Showing", learn: "You will learn to", before: "Before class",
       materials: "Class materials", soon: "Materials will be posted here before class.", none: "No sessions for this topic yet.",
       download: "Download", tbc: "Date TBC", ref: "Reference", refTitle: "Software, books and data",
-      pkgs: "R packages we use", pkgsNote: "Install them as you reach each week, or all at once:",
+      pkgs: "R packages we use", pkgsNote: "Install them as you reach each session, or all at once:",
       kinds: { handout: "Handout", script: "R script", data: "Data", solutions: "Solutions", link: "Link" },
-      tracks: { r: "R programming", stat: "Statistics", gis: "GIS & mapping" }, mark: "W" }
+      tracks: { r: "R programming", stat: "Statistics", gis: "GIS & mapping" }, mark: "S" }
   };
 
   var lang = "es";
@@ -44,7 +44,7 @@
   }
   function today() { var t = new Date(); return t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0"); }
   function wkNo(i) { return UI[lang].mark + String(i + 1).padStart(2, "0"); }
-  function wkId(i) { return "week" + String(i + 1).padStart(2, "0"); }
+  function wkId(i) { return "session" + String(i + 1).padStart(2, "0"); }
   function nextIndex() {
     var t = today(), ws = state.weeks;
     for (var i = 0; i < ws.length; i++) { if (ws[i].date && ws[i].date >= t) return i; }
@@ -168,5 +168,5 @@
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawTopo, 150); });
   try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawTopo); } catch (e) {}
   render();
-  if (/^#week\d+$/.test(location.hash)) { var el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
+  if (/^#session\d+$/.test(location.hash)) { var el = document.getElementById(location.hash.slice(1)); if (el) el.scrollIntoView(); }
 })();

@@ -8,20 +8,20 @@ Course website for R, statistics and GIS (QGIS and ArcGIS Pro) for spatial ecolo
 | Ruta / Path | Qué es / What it is |
 |---|---|
 | `index.html`, `app.js`, `style.css` | La página. No hace falta editarlos. / The page. No need to edit. |
-| `course-data.js` | **Todo el contenido**: datos del curso, semanas y materiales. / **All the content**: course details, weeks and materials. |
-| `materials/weekNN/` | Guías (PDF), scripts de R, soluciones y datos de cada semana. / Handouts (PDF), R scripts, solutions and data for each week. |
+| `course-data.js` | **Todo el contenido**: datos del curso, sesiones y materiales. / **All the content**: course details, sessions and materials. |
+| `materials/sessionNN/` | Guías (PDF), scripts de R, soluciones y datos de cada sesión. / Handouts (PDF), R scripts, solutions and data for each session. |
 
-Archivos con prefijo `S`/`semana` = castellano; `W`/`week` = inglés. Los datos son comunes.
-Files starting with `S`/`semana` are Spanish; `W`/`week` are English. Data files are shared.
+Archivos con prefijo `S..._Guia`/`sesion` = castellano; `S..._Handout`/`session` = inglés. Los datos son comunes.
+Files starting with `S..._Guia`/`sesion` are Spanish; `S..._Handout`/`session` are English. Data files are shared.
 
 ## Añadir o cambiar materiales / Adding or changing materials
 
-1. En github.com, entra en `materials/weekNN/` y usa **Add file → Upload files**. / On github.com, open `materials/weekNN/` and use **Add file → Upload files**.
-2. Edita `course-data.js` (icono del lápiz) y añade una línea en `"materials"` de esa semana: / Edit `course-data.js` (pencil icon) and add a line to that week's `"materials"`:
+1. En github.com, entra en `materials/sessionNN/` y usa **Add file → Upload files**. / On github.com, open `materials/sessionNN/` and use **Add file → Upload files**.
+2. Edita `course-data.js` (icono del lápiz) y añade una línea en `"materials"` de esa sesión: / Edit `course-data.js` (pencil icon) and add a line to that week's `"materials"`:
 
    ```js
-   { "name": "S03_Diapositivas.pdf", "file": "materials/week03/S03_Diapositivas.pdf", "lang": "es" },
-   { "name": "W03_Slides.pdf", "file": "materials/week03/W03_Slides.pdf", "lang": "en" }
+   { "name": "S03_Diapositivas.pdf", "file": "materials/session03/S03_Diapositivas.pdf", "lang": "es" },
+   { "name": "W03_Slides.pdf", "file": "materials/session03/W03_Slides.pdf", "lang": "en" }
    ```
 
    Sin `"lang"`, el archivo aparece en los dos idiomas. Para un enlace externo usa `"url"` en lugar de `"file"`.

@@ -1,5 +1,5 @@
 # =====================================================================
-#  Spatial Ecology  ·  Week 1
+#  Spatial Ecology  ·  Session 1
 #  Getting set up: first steps in R
 # =====================================================================
 #
@@ -159,7 +159,7 @@ boxplot(elevation_m ~ habitat, data = points, las = 2, xlab = "", ylab = "Elevat
 par(mar = c(5, 4, 4, 2))
 
 # A first "map": longitude on x, latitude on y.
-# This is not yet a proper map (no projection); that comes in Week 5.
+# This is not yet a proper map (no projection); that comes in Session 5.
 points$habitat <- factor(points$habitat)
 plot(latitude ~ longitude, data = points,
      col = as.integer(points$habitat), pch = 19,
@@ -182,14 +182,14 @@ dev.off()
 
 
 # ---------------------------------------------------------------------
-# 12. Get ready for Week 2
+# 12. Get ready for Session 2
 # ---------------------------------------------------------------------
 # Run this once (it takes a few minutes). Remove the # first.
 # install.packages("tidyverse")
 
 
 # =====================================================================
-#  EXERCISES  (answers are in week01_solutions.R; try first!)
+#  EXERCISES  (answers are in session01_solutions.R; try first!)
 # =====================================================================
 # E1. A transect of 2.5 km was walked in 50 minutes. Store both values
 #     in objects and calculate walking speed in km per hour.

@@ -8,7 +8,7 @@
 //  Fechas / dates: "2026-11-04"  ("" = por confirmar / to be confirmed)
 //  Temas / tracks: "r", "stat", "gis"
 //  Materiales / materials:
-//    { "name": "archivo.pdf", "file": "materials/week03/archivo.pdf", "lang": "es" }
+//    { "name": "archivo.pdf", "file": "materials/session03/archivo.pdf", "lang": "es" }
 //    "lang": "es" o "en" = solo se muestra en ese idioma; sin "lang" = en los dos.
 //    "lang": "es" or "en" = shown only in that language; no "lang" = both.
 //    Para un enlace externo usa "url" en lugar de "file". / For an external link use "url" instead of "file".
@@ -23,18 +23,18 @@ window.COURSE = {
       "en": "Spatial Ecology"
     },
     "tagline": {
-      "es": "Clases semanales prácticas de R, estadística y SIG para ecólogos, con datos de especies y paisaje en R, QGIS y ArcGIS Pro.",
-      "en": "Weekly hands-on classes in R, statistics and GIS for ecologists, working with species and landscape data in R, QGIS and ArcGIS Pro."
+      "es": "Clases prácticas de R, estadística y SIG para ecólogos, con datos de especies y paisaje en R, QGIS y ArcGIS Pro.",
+      "en": "Hands-on classes in R, statistics and GIS for ecologists, working with species and landscape data in R, QGIS and ArcGIS Pro."
     },
     "instructor": "",
     "when": {
-      "es": "Semanal · día, hora y aula por confirmar",
-      "en": "Weekly · day, time and room to be confirmed"
+      "es": "Día, hora y aula por confirmar",
+      "en": "Day, time and room to be confirmed"
     },
     "contact": "",
     "intro": {
-      "es": "Cada semana tiene una guía en PDF, el script de R, las soluciones y los datos. Trae un portátil con el software de la semana 1 instalado. Todos los datos son simulados con fines docentes (Sierra de Montfred, un parque natural ficticio).",
-      "en": "Each week has a PDF handout, the R script, the solutions and the data. Bring a laptop with the Week 1 software installed. All data are simulated for teaching (Sierra de Montfred, a fictitious natural park)."
+      "es": "Cada sesión tiene una guía en PDF, el script de R, las soluciones y los datos. Trae un portátil con el software de la sesión 1 instalado. Todos los datos son simulados con fines docentes (Sierra de Montfred, un parque natural ficticio).",
+      "en": "Each session has a PDF handout, the R script, the solutions and the data. Bring a laptop with the Session 1 software installed. All data are simulated for teaching (Sierra de Montfred, a fictitious natural park)."
     },
     "all_data": ""
   },
@@ -74,7 +74,7 @@ window.COURSE = {
       "materials": [
         {
           "name": "S01_Guia_Puesta_en_marcha.pdf",
-          "file": "materials/week01/S01_Guia_Puesta_en_marcha.pdf",
+          "file": "materials/session01/S01_Guia_Puesta_en_marcha.pdf",
           "lang": "es",
           "kind": "handout",
           "note": {
@@ -83,8 +83,8 @@ window.COURSE = {
           }
         },
         {
-          "name": "W01_Handout_Getting_set_up.pdf",
-          "file": "materials/week01/W01_Handout_Getting_set_up.pdf",
+          "name": "S01_Handout_Getting_set_up.pdf",
+          "file": "materials/session01/S01_Handout_Getting_set_up.pdf",
           "lang": "en",
           "kind": "handout",
           "note": {
@@ -93,8 +93,8 @@ window.COURSE = {
           }
         },
         {
-          "name": "semana01_introduccion_R.R",
-          "file": "materials/week01/semana01_introduccion_R.R",
+          "name": "sesion01_introduccion_R.R",
+          "file": "materials/session01/sesion01_introduccion_R.R",
           "lang": "es",
           "kind": "script",
           "note": {
@@ -103,8 +103,8 @@ window.COURSE = {
           }
         },
         {
-          "name": "week01_intro_to_R.R",
-          "file": "materials/week01/week01_intro_to_R.R",
+          "name": "session01_intro_to_R.R",
+          "file": "materials/session01/session01_intro_to_R.R",
           "lang": "en",
           "kind": "script",
           "note": {
@@ -114,7 +114,7 @@ window.COURSE = {
         },
         {
           "name": "survey_points.csv",
-          "file": "materials/week01/survey_points.csv",
+          "file": "materials/session01/survey_points.csv",
           "kind": "data",
           "note": {
             "es": "Guárdalo en la carpeta data/ del proyecto",
@@ -122,8 +122,8 @@ window.COURSE = {
           }
         },
         {
-          "name": "semana01_soluciones.R",
-          "file": "materials/week01/semana01_soluciones.R",
+          "name": "sesion01_soluciones.R",
+          "file": "materials/session01/sesion01_soluciones.R",
           "lang": "es",
           "kind": "solutions",
           "note": {
@@ -132,8 +132,8 @@ window.COURSE = {
           }
         },
         {
-          "name": "week01_solutions.R",
-          "file": "materials/week01/week01_solutions.R",
+          "name": "session01_solutions.R",
+          "file": "materials/session01/session01_solutions.R",
           "lang": "en",
           "kind": "solutions",
           "note": {
@@ -171,8 +171,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Instala el tidyverse: install.packages(\"tidyverse\"). Trae la carpeta del proyecto de la semana 1.",
-        "en": "Install the tidyverse: install.packages(\"tidyverse\"). Bring your Week 1 project folder."
+        "es": "Instala el tidyverse: install.packages(\"tidyverse\"). Trae la carpeta del proyecto de la sesión 1.",
+        "en": "Install the tidyverse: install.packages(\"tidyverse\"). Bring your Session 1 project folder."
       },
       "materials": []
     },
@@ -204,8 +204,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Repasa el script de la semana 2; usamos los mismos datos.",
-        "en": "Revise the Week 2 script; we reuse the same data."
+        "es": "Repasa el script de la sesión 2; usamos los mismos datos.",
+        "en": "Revise the Session 2 script; we reuse the same data."
       },
       "materials": []
     },
@@ -271,8 +271,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Comprueba que QGIS se abre sin errores y descarga los datos de esta semana en tu carpeta data/.",
-        "en": "Make sure QGIS opens without errors and download this week's data into your data/ folder."
+        "es": "Comprueba que QGIS se abre sin errores y descarga los datos de esta sesión en tu carpeta data/.",
+        "en": "Make sure QGIS opens without errors and download this session's data into your data/ folder."
       },
       "materials": []
     },
@@ -439,8 +439,8 @@ window.COURSE = {
         ]
       },
       "prep": {
-        "es": "Instala install.packages(\"maxnet\") y ten a mano el CSV limpio de la semana 8.",
-        "en": "Install install.packages(\"maxnet\") and have the cleaned CSV from Week 8 ready."
+        "es": "Instala install.packages(\"maxnet\") y ten a mano el CSV limpio de la sesión 8.",
+        "en": "Install install.packages(\"maxnet\") and have the cleaned CSV from Session 8 ready."
       },
       "materials": []
     },
